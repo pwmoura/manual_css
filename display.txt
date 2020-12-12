@@ -1,0 +1,15 @@
+DISPLAY
+=======
+display:none --> não aparece.
+display: block; --> aparece o elemento(não altera o layout como se não existisse).
+display: inline; --> em linha um do lado do outro (Bom para menu).
+
+VISIBILITY:
+-----------
+visibility: hidden; --> Não aparece, mas ainda ocupa o espaço.
+visibility: visible; --> Elemento visível.
+visibility: collapse --> remove uma parte da tabela sem estragar o layout.
+
+
+
+

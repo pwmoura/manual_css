@@ -1,0 +1,64 @@
+BORDAS
+=======
+
+	# border-style
+	-------------
+	/*
+		dotted -  Define uma borda pontilhada.
+		dashed - Define uma borda tracejada.
+		solid - Define uma borda sólida.
+		double -  Define uma margem dupla.
+		groove - Define uma borda sulcada 3D. O efeito depende do valor de fronteira cor.
+		ridge - Define uma borda ondulada 3D. O efeito depende do valor de fronteira cor.
+		inset - Define uma borda 3D embutida. O efeito depende do valor de fronteira cor.
+		outset - Define uma borda início 3D. O efeito depende do valor de fronteira cor.
+		none - Nenhuma defição para tipo de borda.
+		hidden - Define uma borda escondida.
+	*/
+		p.dotted {border-style: dotted;}
+		p.dashed {border-style: dashed;}
+		p.solid {border-style: solid;}
+		p.double {border-style: double;}
+		p.groove {border-style: groove;}
+		p.ridge {border-style: ridge;}
+		p.inset {border-style: inset;}
+		p.outset {border-style: outset;}
+		p.none {border-style: none;}
+		p.hidden {border-style: hidden;}
+		p.mix {border-style: dotted dashed solid double;}/*cima direita embaixo esquerda*/
+
+	
+
+	# border-width
+	---------------
+	Largura da borda. (in px, pt, cm, em, etc)
+		border-width: 5px; --> /*Valor em px.*/
+		border-width: medium; --> /*Conceito de largura: thin, medium, thick*/
+		border-width: 2px 10px 4px 20px; /*cima direita embaixo esquerda*/
+	
+	
+	# border-color
+	--------------
+	Cor da borda.
+	border-color: red; /*Aceita nomes da cores.*/
+	border-color: red green blue yellow;/*Cima direita embaixo esquerda*/
+	border-color: rgb(255,0,0); /*Especificar um valor RGB, como "rgb (255,0,0)*/
+	border-color: #ff0000; /*Aceita cores hexadecimais*/
+	
+	
+	# trabalhando com valores indivituais: border-direção-tipo
+	----------------------------------
+	border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+	border-style: dotted solid double dashed /*cima direita embaixo esquerda*/
+	
+	
+	# Representação rápida:
+	----------------------
+	border: 5px solid red;  /*O estilo(solid) é obrigatório: largura tipo cor*/
+	
+	
+	Fonte:
+		1. http://www.w3schools.com/css/css_border.asp

@@ -1,0 +1,48 @@
+Trabalhando com float:
+----------------------
+A propriedade float gera bugs quando se relaciona com elementos não flutuantes. O principal deles é em relação ao height do container principal que não acompanha o conteúdo que recebe o float. Veja o html a seguir:
+
+	<div class="container">
+		<div class="box">Conteúdo 1</div>
+		<div class="box">Conteúdo 2</div>
+		<div class="box">Conteúdo 3</div>
+		<div class="box">Conteúdo 4</div>
+		<div class="clear"></div><!-- box que limpa os floats ela não aparece -->			
+	</div>
+
+Nesse caso o container recebeu estilização sem float, recebeu margin auto para ser centralizado. Como ele não tem float os elementos box quando receberem o float o bug ocorrerá:
+	
+	.container{
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid red;
+	}
+
+Para resolver o bug devemos alterar a propriedade clear do último elemento dentro do container, isso resetará o float e permitirá que o conainer acompanhe. Veja que uma div foi adicionada ao grupo, essa div com a class clear não aparecerá para o usuário.
+	
+	
+	.container{
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid red;
+	}
+	.box{
+		width: 40%;
+		float: left;
+		border: 1px solid blue;
+		margin: 4%;
+		height: 300px;
+	}
+	.clear{
+		clear: both;
+	}
+
+	<div class="container">
+		<div class="box">Conteúdo 1</div>
+		<div class="box">Conteúdo 2</div>
+		<div class="box">Conteúdo 3</div>
+		<div class="box">Conteúdo 4</div>
+		<div class="clear"></div><!-- box que limpa os floats ela não aparece -->			
+	</div>
+
+A proprieade both limpa o floats e resolve o problema. Outra forma é colocar no final do container a tag: <br clear="all">, que também tem a mesma função.

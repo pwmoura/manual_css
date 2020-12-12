@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>O texto transforma e aparece_aumentando</title>
+	<style type="text/css">
+    	*{
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+		body,html{
+			right:100%;
+			height:100%;
+			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+			font-size: 1em;
+			color: #FFFFFF;
+			
+			/*Gradiente de cima para baixo*/
+			background: #006F32; /* Para browsers quer não suportam gradientes */
+		}
+		div.box{
+			width: 350px;
+			height: 350px;
+			margin: auto;
+			margin-top: 10%;
+			overflow: hidden;
+			position: relative;
+			border-radius:50%;
+			-moz-border-radius:50%;
+			-webkit-border-radius:50%;
+			cursor: pointer;
+		}
+		div.box img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border-radius:50%;
+			-moz-border-radius:50%;
+			-webkit-border-radius:50%;
+			overflow: hidden;
+		}
+		div.box div{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 350px;
+			position: absolute;
+			border-radius:50%;
+			-moz-border-radius:50%;
+			-webkit-border-radius:50%;
+			background-color: black;
+			opacity: 0.7;
+			overflow: hidden;
+		}
+		.e2{
+			opacity:0.1;
+			transform:scale(0);
+			transition-duration: 1s;
+		}
+		div.box:hover .e2{
+			opacity:0.7;
+			transform:scale(1);
+			transition-duration: 1s;
+		}
+    </style>    
+</head>
+
+<body>
+	<div class="box">
+    	<img class="e1" alt="" title="" src="images/1.jpg"/>
+        <div class="e2">A origem do universo e do sistema solar</div>
+    </div>
+</body>
+</html>

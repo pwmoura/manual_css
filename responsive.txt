@@ -1,0 +1,92 @@
+Informa a escala de redimensionamento para aparelhos móveis
+===========================================================
+Evita erros de redimensionamento em celulares. Deve ser colocado no head.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+LARGURA MÁXIMA:
+===============
+1. Redimensione o seu browser até identificar um problema.
+2. Concerte o problema.
+3. Repita.
+
+o MIN pode ser usado no lugar do max.
+
+Em telas de largura máxima 1128px aplicar os seguintes estilos.
+
+@media screen and (max-width: 1128px) {
+	/*Código que mudará aqui...*/
+}
+
+
+UM ARQUIVO PARA CADA ESCALA:
+===========================
+É possível definir um css para cada escala de tamanho de tela. Isso pode ser útil para determinados projetos em que há layouts diferentes para se adequar aos dispositivos móveis.
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)" href="style1.css">
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="style2.css">
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 400x)" href="style3.css">
+
+
+IMAGEM ADAPTÁVEL:
+================
+img {
+   max-width: 100%;
+}
+
+
+EVITAR PROPORÇÃO EXAGERADA DE IMAGENS
+=====================================
+A seguir vamos garantir que todas as imagens, videos e conteúdos embedados fiquem com a largura máxima de 100% do tamanho original.
+
+img,
+picture,
+video,
+embed {
+   max-width: 100%;
+}
+Aqui cabe uma observação. Como no nosso mock-up final as imagens em smartphones ocuparão o tamanho de uma coluna eu preferi utilizar um tamanho proporcionalmente maior (500x413px). Assim nenhuma imagem irá estourar a resolução nos smartphones.
+
+
+MEDIDAS RELATIVAS
+=================
+As medidas relativas se adequam melhor aos dispositivos. A vantagem é que alterando o elemento a que elas são relativas você modifica todos os outros, evitando trabalho de modificação. Para funcionar bem o tamanho da fonte do elemento pai deve ser definido, assim melhora o controle do tamanho das fontes evitando ações inesperadas, pois os browsers podem possuir definições diferentes.
+rem //--> relativo a medida da font-size do body/html, por exemplo: 16px --> 1 rem
+em //--> relativo a medida do font-size do container pai do elemento.
+
+
+CONVERTER FONTE:
+================
+Coloque o body da seguinte maneira:
+body {
+   font-size: 62.5%;
+}
+
+Assim:
+==> 1.2em equivale a 12px.
+==> 1.4em equivale a 14px.
+==> 1.5em equivale a 15px.
+
+
+CONVERSÃO DE px PARA %:
+=======================
+Escolha entre a largura e o comprimento de uma imagem em px o valor menor e divida pelo maior. Dessa forma mais encontrar qual é a razão matemática entre os dois valores. Depois é só converter, escolha a largura em px que a sua imagem deve ficar e multiplique pela razão, o resultado será o valor menor das duas dimensões.
+
+Largura(px) / Comprimento (px) = Razão matemática
+
+Para construir a tal da fundação flexível é preciso seguir uma formula estrutural básica: objeto : contexto = resultado.
+
+Não fez o menor sentido? É, para mim também não fez a primeira vez que eu li. Vamos adiantar um pouquinho a prática e pensar no seguinte: temos uma div de largura 1128px. Dentro dela uma coluna com 264px de largura. A coluna é, portantom filha do container. Então vamos pegar o valor em px da coluna (objeto = 264px) e dividir pelo valor em pixel do elemento pai (contexto = 1128px). O resultado deu 0,23404255319149. Agora basta andar duas casas para a esquerda com a virgula e acrescentar um ponto que temos o valor 23.404255319149. E esta é a correspondência da nossa coluna em porcentagem: 23.404255319149%. Este número é realmente grande e a tentação é grande para chamar de 23% e acabar com a história. Mas, se você arredondar, uma hora a soma vai quebrar. Computadores são bem mais exatos que a gente. Eles sabem lidar bem com matemática…
+
+Enfim, design responsivo é repetir esta continha a exaustão, meus caros. Usar um sistema de Grid ou Framework pronto é mais fácil? Muito! Como usar um elevador é mais fácil do que subir vários lances de escadas de um prédio a pé. Mas o dia que o nosso prédio metafórico pegar fogo saber COMO subir as tais das escadas é um conhecimento bem útil para salvar sua pele, certo? O mesmo vale para grids e frameworks. São ferramentas legais, mas tenha certeza que você sabe se virar sem elas. Pode ser que caia no seu colo um projeto onde, por uma incompatibilidade de linguagens ou escolha das outras pessoas envolvidas, você não possa usar um sistema de Grid pronto. Vai por mim. É melhor aprender a fazer na unha primeiro. Depois não diga que eu não avisei…
+
+
+ELIMINANDO BORDER PADDING, ajuda com %
+======================================
+Border-box
+Outro truque bacana de CSS para design responsivo é o box-sizing border box acompanhado do seletor *. Basicamente esta regra diz que todos os elementos agora levarão em conta apenas a largura e altura determinada, sem somar a este valor a borda e o padding. Ou seja, uma coisa a menos para nos preocuparmos.
+
+*, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}

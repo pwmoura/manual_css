@@ -1,0 +1,87 @@
+LISTAS EM CSS:
+==============
+Existem dois tipos de listas:
+
+	Lista não ordenada:
+	-------------------
+	<ul>
+		<li>Item 01</li>
+		<li>Item 02</li>	
+		<li>Item 03</li>	
+		<li>Item 04</li>
+	</ul>
+	
+	Lista ordenada:
+	-------------------
+	<ol>
+		<li>Item 01</li>
+		<li>Item 02</li>	
+		<li>Item 03</li>	
+		<li>Item 04</li>
+	</ol>
+
+
+
+
+Definir o tipo de marcador:
+===========================
+
+	# Lista não ordenada:
+	---------------------
+	list-style-type: circle;
+	
+	circle --> Cículo.
+	square --> Formato de quadrado.
+	
+		ul.a {
+			list-style-type: circle;
+		}
+		
+		ul.b {
+			list-style-type: square;
+		}
+
+
+	Listas ordenadas:
+	-----------------
+	list-style-type: upper-roman;
+	upper-roman --> Letras minúsculas.
+	ol.c {
+		list-style-type: upper-roman;
+	}
+	
+	ol.d {
+		list-style-type: lower-alpha;
+	}
+
+
+
+Definir uma imagem como marcador:
+---------------------------------
+	ul {
+		list-style-image: url('sqpurple.gif');
+	}
+
+
+
+Definir a posição dos itens das listas:
+---------------------------------------
+Dentro ou fora do fluxodo do conteúdo.
+
+ul.a {list-style-position:inside;}
+ul.b {list-style-position:outside;}
+
+
+
+Todas as propriedades em declaração única:
+------------------------------------------
+Ao usar a propriedade taquigrafia, a ordem dos valores de propriedade são:
+
+do tipo list-style (se list-style-imagem for especificado, o valor dessa propriedade será exibido se a imagem por algum motivo não pode ser exibida)
+list-style-position (especifica se os marcadores de item de lista deve aparecer dentro ou fora do fluxo de conteúdo)
+list-style-image (especifica uma imagem como marcador de item de lista)
+Se um dos valores de propriedade acima estiver faltando, o valor padrão para a propriedade em falta será inserido, se houver.
+
+ul {
+    list-style: square inside url("sqpurple.gif");
+}

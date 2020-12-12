@@ -1,0 +1,241 @@
+PROPRIEDADE ANIMATION DO CSS3:
+==============================
+
+	# Sintax:
+	---------
+	Para usar o animation, é necessário criar um keyframe e chamá-lo no elemento CSS. é necessário estabelecer uma contagem de tempo para que o efeito seja estabelecido. Utiliza-se o from (de) e o to(para). Veja o exemplo:
+
+		Exemplo 01:
+		-----------
+		Nesse exemplo o texto do parágrafo vai mudar de verde para vermelho em 3 segundos.
+		p{
+			color:green;
+			animation-name: exemplo;
+			animation-duration: 5s;
+		}
+		@keyframes exemplo{
+			from{color:green}
+			to{color:red;}
+		}
+		
+		
+		Exemplo 02:
+		-----------
+		Nesse exemplo a cada momento a cor muda de acordo com a porcentagem do tempo de 5 segundos.
+		p{
+			color:green;
+			animation-name: exemplo;
+			animation-duration: 5s;
+		}
+		@keyframes exemplo{
+			  0%{color:green}
+			 30%{color:yellow;}
+			 50%{color:blue;}
+			 80%{color:red;}
+			100%{color:purple;}
+		}
+		
+		
+		Exemplo 03:
+		-----------
+		Mudar a posição do elemento.
+		p{
+			color:green;
+			position: relative;
+			max-width: 300px;
+			min-width:250px;
+			background-color: red;
+			text-align:center;
+			font-family:verdana;
+			font-size:14px;
+			font-weight:bold;
+			animation-name:exemplo;
+			animation-duration: 5s;
+		}
+		@keyframes exemplo{
+			  0%{left:0px;}
+			 30%{left:20px;}
+			 50%{bottom:20px;}
+			 80%{top:30px;}
+			100%{left: 200px; color:#ffffff;}
+		}
+		
+		
+		Exemplo 04:
+		-----------
+		Criando um atraso na animação.
+		p{
+			color:green;
+			position: relative;
+			max-width: 300px;
+			min-width:250px;
+			background-color: red;
+			text-align:center;
+			font-family:verdana;
+			font-size:14px;
+			font-weight:bold;
+			animation-name:exemplo;
+			animation-duration: 5s;
+			animation-delay: 3s;/*Atrasa o início em 3 segundos.*/
+		}
+		@keyframes exemplo{
+			from{color:green}
+			to{color:red;}
+		}
+	
+		
+		Exemplo 05:
+		-----------
+		Definindo quantas veze uma animação deve ser executada.
+		p{
+			color:green;
+			animation-name: exemplo;
+			animation-duration: 5s;
+			animation-delay: 2s;
+			animation-iteration-count: 5;/*Repete a animação 5 vezes.*/
+		}
+		@keyframes exemplo{
+			from{color:green}
+			to{color:red;}
+		}
+		
+		
+		Exemplo 06:
+		-----------
+		Repetição infinita da animação.
+		p{
+			color:green;
+			animation-name: exemplo;
+			animation-duration: 2s;
+			animation-delay: 2s;
+			animation-iteration-count: infinite;/*Repete a animação infinitamente.*/
+		}
+		@keyframes exemplo{
+			from{color:green}
+			to{color:red;}
+		}
+		
+		
+		Exemplo 07:
+		-----------
+		A animação é invertida, ou seja, ocorre de forma reversa.
+		Nesse exemplo o botão deveria ir para a esquerda, em função da propriedade reversa ele vai para a esquerda.
+		p{
+			color:#ffffff;
+			background-color:#00d96c;
+			max-width: 200px;
+			text-align: center;
+			font-family: tahoma;
+			font-size: 16px;
+			font-weight: bolder;
+			padding: 30px;
+			position: relative;
+			
+			/*Animação do elemento*/
+			animation-name: exemplo;
+			animation-duration: 2s;
+			animation-delay: 4s;
+			animation-iteration-count: infinite;
+			animation-direction: reverse;/*A animação acontece de forma reversa.*/
+		}
+		@keyframes exemplo{
+			from{left:0px;}
+			to{left: 30px;}
+		}
+
+		
+		Exemplo 08:
+		-----------
+		Alernar a ordem da animação, ir e voltar.
+		p{
+			color:#ffffff;
+			background-color:#00d96c;
+			max-width: 200px;
+			text-align: center;
+			font-family: tahoma;
+			font-size: 16px;
+			font-weight: bolder;
+			padding: 30px;
+			position: relative;
+			
+			/*Animação do elemento*/
+			animation-name: exemplo;
+			animation-duration: 2s;
+			animation-delay: 4s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;/*movimento de ir e voltar.*/
+		}
+		@keyframes exemplo{
+			from{left:0px;}
+			to{left: 60px; max-width:150px;}
+		}
+		
+		Exemplo 09:
+		-----------
+		Alternar velocidade durante a animação.
+		
+			ease --> especifica uma animação com um início lento, em seguida, rapidamente, em seguida, terminar lentamente (este é o padrão).
+			linear --> especifica uma animação com a mesma velocidade do início ao fim.
+			ease-in --> especifica uma animação com um início lento.
+			ease-out --> especifica uma animação com um final lento.
+			ease-in-out --> especifica uma animação com um começo e final lento.
+			cubic-bezier(n,n,n,n) --> permite definir seus próprios valores em uma função cúbica-bezier.
+		
+		#div1 {animation-timing-function: linear;}
+		#div2 {animation-timing-function: ease;}
+		#div3 {animation-timing-function: ease-in;}
+		#div4 {animation-timing-function: ease-out;}
+		#div5 {animation-timing-function: ease-in-out;}
+		
+		
+		Exemplo 10:
+		-----------
+		Existem duas formas de representar sintaticamente o animate.
+		
+			Forma normal:
+			-------------
+			div {
+				animation-name: example;
+				animation-duration: 5s;
+				animation-timing-function: linear;
+				animation-delay: 2s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
+			
+			Forma abreviada:
+			----------------
+			div {
+				animation: example 5s linear 2s infinite alternate;
+			}
+			
+		
+		Exemplo 11:
+		-----------
+		Mudar algo de lugar e mantê-lo lá.
+		
+		none --> Valor padrão. A animação não vai aplicar quaisquer estilos para o elemento de destino antes ou depois ele está executando
+		
+		forwards --> Após a animação termina (determinado pela animação iteração-count), a animação vai aplicar os valores de propriedade para o momento em que a animação terminou.
+		
+		backwards --> The animation will apply the property values defined in the keyframe that will start the first iteration of the animation, during the period defined by animation-delay. These are either the values of the from keyframe (when animation-direction is "normal" or "alternate") or those of the to keyframe (when animation-direction is "reverse" or "alternate-reverse")
+		
+		both --> A animação vai seguir as regras para ambos frente e para trás. Ou seja, ele vai estender as propriedades de animação em ambos os sentidos.
+		
+		initial --> Padrão do navegador.
+		inherit --> Herda do elemento pais.
+		
+		div {
+			-webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+			animation-fill-mode: forwards;
+		}
+		
+		
+		Exemplo 12:
+		-----------
+		Pausar uma animaçãono meio do ciclo:
+		paused --> Especifica que a animação está em pausa
+		running --> Valor padrão. Especifica que a animação está sendo executado.
+		initial --> Padrão do navegador.
+		inherit --> herda do elemento pai.
+		

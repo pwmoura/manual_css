@@ -1,0 +1,141 @@
+
+   
+   Configurações para containers
+   =============================
+
+        Tipos de display:
+        -----------------
+            display: grid; --> tipo block.
+            display: inline-grid; --> tipo inline.
+
+
+        Separando os elementos em colunas:
+        ----------------------------------
+            grid-template-column: auto auto auto; --> Separa os elementos filhos em colunas.
+            grid-template-columns: 200px 200px 200px; --> Definindo o tamanho das grids.
+            grid-template-columns: 1fr 2fr 1fr; --> fr representa a fração [divide em partes iguais].
+            grid-template-columns: 500px 1fr 2fr; --> As unidades podem ser misturadas.
+            grid-template-columns: repeat(3, 1fr); --> repeat() //-> repete a fração três vezes.
+            grid-template-columns: 20px repeat(6, 1fr) 20px; --> repeat() //-> pode ser misturado.
+            grid-template-columns: repeat(5, 1fr 2fr); --> é possível criar padrões[nesse caso 10]
+
+
+        Separando os elementos em linhas:
+        ---------------------------------
+            grid-template-rows: auto auto auto; --> Separa os elementos filhos em colunas.
+            grid-template-rows: 200px 200px 200px; --> Definindo o tamanho das grids.
+            grid-template-rows: 1fr 2fr 1fr; --> fr representa a fração [divide em partes iguais].
+            grid-template-rows: 500px 1fr 2fr; --> As unidades podem ser misturadas.
+            grid-template-rows: repeat(3, 1fr); --> repeat() //-> repete a fração três vezes.
+            grid-template-rows: 20px repeat(6, 1fr) 20px; --> repeat() //-> pode ser misturado.
+            grid-template-rows: repeat(5, 1fr 2fr); --> é possível criar padrões[nesse caso 10].
+
+
+        Espaçamento entre as linhas e colunas:
+        --------------------------------------
+            grid-column-gap: 50px; --> Espaçamento entre as colunas.
+            grid-row-gap: 50px; --> Espaçamento entre as linhas.
+            grid-gap: 50px 100px; --> Espaçamento entre as linhas e colunas juntas.
+            grid-gap: 50px; --> mesmo valor de espaçamento para linha e coluna.
+
+
+        Criando padrões de tamanhos nas trilhas:
+        ----------------------------------------
+            grid-auto-rows: 200px; --> garante que o padrão de altura criada tenha 200px;
+
+        
+    Configurações para os itens:
+    ============================
+        
+        Os grids são organizados em linhas entre as caixas de forma horizontal e vertical. grid-column são as linhas verticais e grid-row são as linhas horizontais.
+
+
+        Onde a caixa inicia e termina na linha:
+        --------------------------------------
+        !   !   !
+        !   !   !   --> grid-column --> são quantas linhas verticais existem entre as caixas.
+        !   !   !   --> grid-column-start --> linha vertical inicial.
+        !   !   !   --> grid-column-end --> onde essa linha vertical termina.
+
+        grid-column-start: 1; --> A caixa inicia na linha vertical 1.
+        grid-column-end: 4; --> A caixa termina na linha vertical 4.
+        grid-column: 1/4; --> Forma resumida dos dois acima [inicia no 1 e termina no 4]
+
+
+        Onde a caixa inicia e termina na coluna:
+        ----------------------------------------
+        -------------
+        -------------   --> grid-row --> são as linhas horizontais entre as caixas.
+        -------------   --> grid-row-start --> onde a linha horizontal inicial.
+        -------------   --> grid-row-end--> onde a linha horizontal termina.
+
+        grid-row-start: 1; --> A caixa inicia na linha horizontal 1.
+        grid-row-start: 4; --> A caixa termina na linha horizontal 4.
+        grid-row: 1/4; --> Forma resumida dos dois acima [inicia no 1 e termina no 4]
+
+
+Configuração por área:
+----------------------
+
+        Organizando os itens pelo container:
+        ------------------------------------
+            A ordem dos itens podem ser trocadas.
+           
+            Css:
+                .container{
+                    display:flex;
+                    grid-template-area: "header header"
+                                        "main aside"
+                                        "footer footer";
+                }
+                .item-1{
+                    grid-area: header;
+                }
+                .item-2{
+                    grid-area: main;
+                }
+                .item-3{
+                    grid-area: aside;
+                }
+                .item-4{
+                    grid-area: footer;
+                }
+
+            html:
+                <ul class="list-box container">
+                    <li class="item-1">1</li>
+                    <li class="item-2">2</li>
+                    <li class="item-3">2</li>
+                    <li class="item-4">3</li>
+                </ul>
+
+Alinhamentos:
+-------------
+
+    Content --> alinhamento do conteúdo
+    -----------------------------------
+        justify-content --> [eixo X] alinha o conteúdo horizontalmente.
+        align-content --> [eixo Y] alinha o conteúdo verticalmente.
+
+            Valores:
+                start / end / center / stretch / space-between
+                space-around / evenly
+        
+        1. start: 
+            x -> esquerda 
+            y -> acima
+        
+        2. end:
+            x -> direita
+            y -> abaixo
+        
+        3. center:
+            x -> centro
+            y -> centro
+        
+        4. stretch:
+            x -> valor padrão [esquerda]
+            y -> valor padrão [acima]
+        
+        5. space-between:
+            x e y --> um elemento encostado em cada ponta, espaço dividido entre eles caso tenha mais de 2.

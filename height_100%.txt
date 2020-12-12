@@ -1,0 +1,3 @@
+/*Declaramos que o elemento html e body tem 100%*/
+html, body{height: 100%;}
+.elemento{height:100%}

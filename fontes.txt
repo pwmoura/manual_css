@@ -1,0 +1,120 @@
+FONTES
+=======
+
+	# Fontes genéricas: serif, sans-serif, monospace, cursive e fantasy
+	-----------------------------------------------------------------
+	A ordem de precedência entre as fontes será obedecida pelo navegador em ordem crescente da direita para a esquerda. Se o nome da fonte tiver espaço escreva-o entre aspas.
+	
+		  I- 'sans-serif': fontes normais com serifas (Utiliza-se 'serif' no final como último termo)
+			font-family:Times,Georgia, Times New Roman, Palatino, Bookman, New Century Schoolbook, serif;
+		
+		
+		 II- 'serif': fontes normais sem serifas(Utiliza-se 'sans-serif' no final como último termo)
+			font-family: Arial, Gill Sans, Lucida, Helvetica Narrow, verdana, sans-serif;
+		
+		
+		III- 'monospace': fontes com largura fixa.(Utiliza-se 'monospace' no final como último termo)
+			font-family:Courier New, Lucida Console, Andale Mono, Courier New, Courier, Lucidatypewriter, Fixed, monospace;
+		
+		
+		IV- 'cursive': fontes que simulam manuscrito (Utiliza-se 'cursive' no final como último termo)
+			font-family: Comic Sans, Comic Sans MS, Zapf Chancery, Coronetscript, Florence, Parkavenue, cursive;
+		
+		
+		 V- 'fantasy': fontes decorativas , para títulos, etc (Utiliza-se 'fantasy' no final como último termo)
+			font-family: Impact, Arnoldboecklin, Oldtown, Blippo, Brushstroke, fantasy;
+	
+	
+	
+	# Estilos da fonte: normal, italic, oblique. 
+	---------------------------------------
+	font-style: normal;
+	
+	
+	
+	# Pesos da fonte ou espeçura: normal, bold, 100-900, bolder. 
+	-----------------------------------------------------------
+	font-weight: bold;
+	font-weight: 500;
+	font-weight: bolder;
+	
+	
+	
+	# Variação das fontes:small-caps, normal
+	----------------------------------------
+	font-variant: small-caps; /*Toda com caracteres maiúsculos, diferencia maiúscula pelo tamanho*/
+	
+	
+	
+	# Alongamentos das fontes: ultra-condensed,extra-condensed,condensed,
+	semi-condensed,normal,semi-expanded,expanded,extra-expanded,ultra-expanded
+	--------------------------------------------------------------------------
+	font-stretch:ultra-condensed;
+	
+	
+	
+	# Tamanho da fonte: 12px, 20% ou 1.5687em.
+	------------------------------------------
+	Se você não especificar um tamanho de fonte, o tamanho
+	padrão para texto normal, como parágrafos, é 16px (16px = 1em).
+	40px / 16 = 2.5em -- 30px / 16 = 1.875em -- 14px / 16 = 0.875em
+	font-size: 1.365478em;/*permitir aos utilizadores redimensionar o texto (no menu do navegador)*/
+	font-size:15px; /*Tamanho fixo*/
+	
+	
+		Pode ser dado conceitos: 
+		medium,xx-smal,x-small,small,large,x-large,x-large
+		smaller,larger,length,initial,inherit.
+		------------------------
+		font-size: larger;
+		
+	
+		Pode ser regulado pelo body:
+		----------------------------
+		Se mudar a porcentagem, modifica o tamanho padrão em 'em'.
+			body {
+				font-size: 100%;
+			}
+
+			h1 {
+				font-size: 2.5em;
+			}
+
+			h2 {
+				font-size: 1.875em;
+			}
+
+			p {
+				font-size: 0.875em;
+			}
+	
+	
+	# Representação abreviada:
+	--------------------------
+	p.ex2{
+		font: italic bold 12px Georgia, serif;
+	}
+	
+	
+	
+	# Instalar fontes na página(Em arquivos de fontes):
+	---------------------------------------------------
+	Use letras minúsculas para o URL fonte. Letras maiúsculas pode dar resultados
+	inesperados no IE. Extensões aceitas por todos os navegadores: TTF,OTF e WOFF.
+	Os formatos: WOFF2, SVG e EOT dão muitos problemas em navegadores.
+	
+	@font-face {
+		font-family: myFirstFont;
+		src: url(diretorio/arquivo_da_font.woff);
+	}
+
+	@font-face {
+		font-family: "Raleway Especial";
+		src: local(Raleway), url(../fonts/Raleway-Bold.ttf);
+		font-weight: 600;
+	}
+	
+	p{
+		font-family: 'myFirstFont';
+	}
+	

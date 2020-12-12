@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex-Box</title>
+	<style>
+		*, *:before, *:after {
+		   -webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		   box-sizing: border-box;
+		}
+		body{
+			padding: 40px;
+			background-color: #f1f1f1;
+			font-family: Helvetica;
+		}
+		.container{
+			width: 100%;
+			height: 800px;
+			background-color: #f6f6f6;
+			border-radius: 30px;
+			display: flex;
+
+		}
+		.filho{
+			background-color: white;
+			border-radius: 30px;
+			height: 100px;
+			width: 100px;
+			margin: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #88888;
+			font-weight: 600;
+		}
+		.dois{
+			flex-grow: 3;
+		}
+		.um{
+			flex-grow: 1;
+			 
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="filho dois">Filho 1</div>
+		<div class="filho um">Filho 2</div>
+	</div>
+</body>
+</html>

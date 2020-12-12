@@ -1,0 +1,3 @@
+﻿Prefixos dos navegadores:
+=========================
+-webkit-, -moz-, -ms-, -o-.

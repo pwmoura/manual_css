@@ -1,0 +1,74 @@
+﻿Efeitos gradiente:
+==================
+
+# Gradiente linear de cima para baixo:
+--------------------------------------
+Para criar um gradiente linear você deve definir pelo menos duas paradas de cor. Paradas de cores são as cores que deseja para tornar transições suaves entre. Você também pode definir um ponto de partida e uma direção (ou um ângulo), juntamente com o efeito de gradiente.
+
+background: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+#grad {
+    background: red; /* Para browsers quer não suportam gradientes */
+    background: -webkit-linear-gradient(red, yellow); /* Para o Safari de 5.1 até 6.0 */
+    background: -o-linear-gradient(red, yellow); /* Para o Opera de 11.1 até 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* Para o Firefox de 3.6 até 15 */
+    background: linear-gradient(red, yellow); /* Sintax padrão */
+}
+
+
+
+Gradiente Linear da esquerda para a direita:
+--------------------------------------------
+Cita uma direção (left ou right) e depois duas cores, a primeira cor citada ficará na direção citada e a segunda na outra.
+
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, red , yellow); /* Standard syntax */
+}
+
+
+
+Gradiente diagonal:
+-------------------
+Especificamos ambas as posições de partida horizontais e verticais. Primeiro informamos duas direções horizontal (right ou left) e vertical (top ou bottom). Em seguida as duas cores. A primeira cor define a posição informada.
+
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, red, yellow); /* Standard syntax */
+}
+
+
+
+Gradiente utilizando ângulos:
+-----------------------------
+É possível definir um ângulo, em vez de as direções predefinidos (para baixo, para cima, para a direita, para a esquerda, para a direita inferior, etc.).
+
+background: linear-gradient(angle, color-stop1, color-stop2);
+
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */
+}
+
+
+
+Gradiente com múltiplas cores:
+------------------------------
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(red, yellow, green); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, yellow, green); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, yellow, green); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, yellow, green); /* Standard syntax */
+}
+
+Fonte: http://www.w3schools.com/css/css3_gradients.asp

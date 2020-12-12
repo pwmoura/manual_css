@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Função: attr(), content, after e before</title>
+<style>
+	/*	Função: attr()
+		A função resgata um atributo do elemento selecionado.
+		
+		Função content""
+		imprime o elemento entre aspas na tela do usuário.
+		
+		Pseudo-elementos :after
+		Insere algo no final do elemento.
+		
+		Pseudo-elementos :before 
+		Insere algo no início do elemento.
+		
+		Esse elemento inserido também pode ser formatado:
+		-------------------------------------------------
+		Nesse caso, todo css vai atacar o elemento > colocado pelo content.
+		a:before {
+		  content: "> ";
+		  display:inline-block;
+		  color: white;
+		  padding:2px 3px;
+		  vertical-align:middle;
+		  background-color: #CCC;
+		  font:12px verdana, arial, tahoma, sans-serif;
+		  margin-right: 3px;
+		}
+}
+	*/
+	a:after{
+		content: " (" attr(href) ")";
+	}
+</style>
+</head>
+
+<body>
+	<h1>Essa função exibe o elemento</h1>
+    <a href="http://www.bola.com.br">bola</a>
+</body>
+</html>

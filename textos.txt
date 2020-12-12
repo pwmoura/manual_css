@@ -1,0 +1,101 @@
+PROPRIEDADES DE TEXTO:
+======================
+
+	# Cor do texto:
+	-------------
+	body {
+		color: blue; /* #000000, rgb(255,0,0) ou red */
+	}
+	
+	
+	# Alinhamento do texto:
+	---------------------
+	div{
+		text-align: center; /*center, right, left, justify*/
+	}
+	
+	
+	# Decoração do texto:
+	--------------------
+	none --> Sem decoração.
+	overline --> Sobre a linha.
+	line-through --> Linha no meio.
+	underline --> Linha abaixo.
+	p{
+		text-decoration: none;
+	}
+	
+	
+	# Transformação do texto:
+	------------------------
+	
+		Tudo maiúsculo:
+			p.uppercase {
+			text-transform: uppercase;
+	}
+		Tudo minúsculo:
+			p.lowercase {
+				text-transform: lowercase;
+			}
+		
+		Primeira letra em maiúsculo:
+			p.capitalize {
+				text-transform: capitalize;
+			}
+	
+	
+	# Aplicar recuo no texto:
+	----------------------
+	p {
+		text-indent: 50px;
+	}
+	
+	
+	# Espaço entre os caracteres:
+	---------------------------
+		h1 {
+			letter-spacing: 3px;
+		}
+
+		h2 {
+			letter-spacing: -3px;
+		}
+	
+	
+	# Altura da linha:
+	---------------
+		p.small {
+			line-height: 0.8;
+		}
+
+		p.big {
+			line-height: 1.8;
+		}
+	
+	
+	# Direção do texto de um elemento:
+	--------------------------------
+		<style>
+			div.ex1 {
+				direction: rtl;
+			}
+		</style>
+		<body>
+
+			<div>This is default text direction.</div>
+			<div class="ex1">This is right-to-left text direction.</div>
+
+		</body>
+	
+	# Espaçamento entre as palavras:
+	------------------------------
+		h1 {
+			word-spacing: 10px;
+		}
+
+		h2 {
+			word-spacing: -5px;
+		}
+	
+	
+	Fontes: http://www.w3schools.com/css/css_text.asp

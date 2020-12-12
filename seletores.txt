@@ -1,0 +1,234 @@
+SELETORES BÁSICOS:
+==================
+
+	1. Selecionar uma tag:
+	----------------------
+	Coloca-se somente o nome da tag.
+	p {
+		text-align: center;
+		color: red;
+	}
+
+
+	2. Selecionar o elemento pelo ID:
+	---------------------------------
+	Utiliza-se a serquilha mais o nome do id.
+	#para1 {
+		text-align: center;
+		color: red;
+	}
+
+
+	3. Selecionar uma CLASS:
+	------------------------
+	.center {
+		text-align: center;
+		color: red;
+	}
+
+
+	4. Tags específicas que possuem uma class:
+	------------------------------------------
+	Seleciona todos os elementos p com a class center. utiliza-se o ponto sem o espaço.
+	p.center {
+		text-align: center;
+		color: red;
+	}
+
+
+	5. Agrupamento de seletores com estilos semelhantes:
+	----------------------------------------------------
+	Eles devem ser separados por vírgula.
+	h1, h2, p {
+		text-align: center;
+		color: red;
+	}
+
+
+	6. Seleciona todos os elementos:
+	--------------------------------
+	*{
+		color: #000000;
+		font-size: 14px;
+	}
+
+
+
+SELETORES DE ATRIBUTOS:
+--------------------------
+
+	# Elementos com atributo específico.
+	
+		a[title]{
+			color: yellow;
+		}
+
+		
+	# Elementos que possuem um valor específico para o atributo.
+	
+		  <style>
+			/*
+			Nesse exemplo será selecionado o link que possui o atributo title com o texto
+			'sai fora.'
+			*/
+			a[title="Sai fora."]{color: red;}
+		  </style>
+		  
+		</head>
+		<body>
+			<a href="#" title="Olá">Tenho o atributo title.</a><br>
+			<a href="#" title="Sai fora.">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a>
+		</body>
+	
+
+	# Elemento que possui uma palavras espacífica dentro da string.
+		  
+		  <style>
+			/*
+			Seleciona o elemento que possui a palavra 'Sai' dentro da string do
+			title.
+			*/
+			a[title~="Sai"]{color: red;}
+		  </style>
+		  
+		</head>
+		<body>
+			<a href="#" title="Olá">Tenho o atributo title.</a><br>
+			<a href="#" title="Sai fora.">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a>
+		</body>
+
+	
+	# Elemento que o valor do atributo começa com um texto.
+		
+		  <style>
+			/*Seleciona o elemento que possui a palavra Sai no início.*/
+			a[title^="Sai"]{color: red;}
+		 </style>
+		  
+		</head>
+		<body>
+			<a href="#" title="Olá">Tenho o atributo title.</a><br>
+			<a href="#" title="Sai fora">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a>
+		</body>
+
+
+	# Elemento que o valor do atributo termina com um texto.
+
+		 <style>
+			/*
+			Seleciona o elemento a que possui a palavra
+			fora no final do title.
+			*/
+			a[title$="fora"]{color: red;}
+		</style>
+		  
+		</head>
+		<body>
+			<a href="#" title="Olá">Tenho o atributo title.</a><br>
+			<a href="#" title="Sai fora">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a>
+		</body>
+
+
+	# Elementos que possui a palavra fora dentro deles.
+		
+		  <style>
+			/*Seletores de atributos*/
+			a[title*="fora"]{color: red;}
+		  </style>
+		  
+		</head>
+		<body>
+			<a href="#" title="Olá">Tenho o atributo title.</a><br>
+			<a href="#" title="Sai fora daqui!">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a><br>
+			<a href="#" title="Olá">Não tenho o atributo title.</a>
+		</body>
+	
+	
+	# Elementos com um determinado prefixo depois hífen.
+
+		<style>
+			/*Seleciona os elementos a que possuem o prefixo db-*/
+			a[title|="db"]{color: red;}
+		</style>
+		  
+		</head>
+		<body>
+			<a href="#" title="db-um">Tenho o atributo title.</a><br>
+			<a href="#" title="db-dois">Não tenho o atributo title.</a><br>
+			<a href="#" title="dbGeral">Não tenho o atributo title.</a><br>
+			<a href="#" title="dbOlha">Não tenho o atributo title.</a><br>
+			<a href="#" title="dbFora">Não tenho o atributo title.</a>
+		</body>
+		</html>
+	
+
+SELETORES HIERÁRQUICOS:
+=======================
+
+		# Seleciona o elemento raiz do documento, pseudo-classe estrutural.
+		
+		  <style>
+			/*Pega e formata o elemento html do documento..*/
+			:root{background: #ff0000;}
+		  </style>
+		  
+		</head>
+		<body>
+			<div>
+				<div> Elemento 01 </div>
+				<div> Elemento 02 </div>
+				<div> Elemento 03 </div>
+				<div> Elemento 04 </div>
+				<div> Elemento 05 </div>
+			</div>
+		</body>
+
+
+
+E:root	elemento E raiz do documento	Pseudo-classe estrutural	3
+E:nth-child(n)	elemento E que é o enésimo filho do seu elemento pai	Pseudo-classe estrutural	3
+E:nth-last-child(n)	elemento E que é o enésimo filho (contado de trás para frente) do seu elemento pai	Pseudo-classe estrutural	3
+E:nth-of-type(n)	elemento E que é o enésimo irmão do seu tipo	Pseudo-classe estrutural	3
+E:nth-last-of-type(n)	elemento E que é o enésimo irmão (contado de trás para frente) do seu tipo	Pseudo-classe estrutural	3
+E:first-child	elemento E que é o primeiro filho de seu elemento pai	Pseudo-classe estrutural	2
+E:last-child	elemento E que é o último filho de seu elemento pai	Pseudo-classe estrutural	3
+E:first-of-type	elemento E que é o primeiro irmão de seu tipo	Pseudo-classe estrutural	3
+E:last-of-type	elemento E que é o último irmão de seu tipo	Pseudo-classe estrutural	3
+E:only-child	elemento E que é o único filho de seu elemento pai	Pseudo-classe estrutural	3
+E:only-of-type	elemento E que é irmão único do seu tipo	Pseudo-classe estrutural	3
+E:empty	elemento E que não tem elementos filhos (inclusive nós de texto)	Pseudo-classe estrutural	3
+E:link
+E:visited	elemento E que sendo destino de um link ainda não foi visitado (:link) ou que já tenha sido visitado (:visited)	Pseudo-classe link	1
+E:active
+E:hover
+E:focus	elemento E durante determinadas ações do usuário	Pseudo-classe ação do usuário	1 e 2
+E:target	elemento E que é o destino de um fragmento identificador de um URI	Pseudo-classe :target	3
+E:lang(pt-br)	elemento E em um determinado idioma - "exemplo: pt-br"	Pseudo-classe :lang()	2
+E:enabled
+E:disabled	elemento E de uma interface de usuário que está habilitado (:enabled) ou desabilitado (:disabled)	Pseudo-classe estado do elemento UI	3
+E:checked	elemento E de uma interface de usuário que está marcado (:checked) (por exemplo: radio-button ou checkbox)	Pseudo-classe estado do elemento UI	3
+E::first-line	primeira linha formatada do elemento E	Pseudo-elemento ::first-line	1
+E::first-letter	primeira letra formatada do elemento E	Pseudo-elemento ::first-letter	1
+E::before	conteúdo gerado antes do elemento E	Pseudo-elemento ::before	2
+E::after	conteúdo gerado depois do elemento E	Pseudo-elemento ::after	2
+E.foo	elemento E cujo valor da classe é "foo"	Seletor classe	1
+E#foo	elemento E cujo valor do atributo ID é "foo".	Selector ID	1
+E:not(seletor)	elemento E que não casa com o seletor simples seletor	Pseudo-classe negação	3
+E F	elemento F descendente do elemento E	Elemento descendente	1
+E > F	elemento F filho do elemento E	Elemento filho	2
+E + F	elemento F imediatamente precedido pelo elemento E	Elemento irmão adjacente	2
+E ~ F	elemento F precedido pelo elemento E	Elemento irmão geral	3

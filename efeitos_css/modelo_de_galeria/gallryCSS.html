@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GalleryCSS</title>
+    <link href="_css/gallery.theme.css" rel="stylesheet" type="text/css">
+    <link href="_css/gallery.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+		*{border: 0px; margin: 0px; padding:0px;}
+		img{max-width: 100%;}
+	</style>
+</head>
+<body>
+    <div class="gallery autoplay items-2"><!-- Aumente o nº de itens -->
+      <div id="item-1" class="control-operator"></div>
+      <div id="item-2" class="control-operator"></div><!-- Cole outra desses aqui -->
+    
+      <figure class="item">
+        <h1><img src="images/1.jpg"  alt=""/></h1>
+      </figure>
+    
+      <figure class="item"><!-- Cole mais um bloco -->
+        <h1><img src="images/2.jpg" alt=""/></h1>
+      </figure>
+    
+	  <div class="controls autoplay">
+        <a href="#item-1" class="control-button">•</a>
+        <a href="#item-2" class="control-button">•</a><!-- Cole mais um controle -->
+      </div>
+    </div>
+</body>
+</html>

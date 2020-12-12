@@ -1,0 +1,75 @@
+POSÍTION:
+=========
+
+Estático, não muda com o fluxo da página:
+-----------------------------------------
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+}
+
+
+
+Posicionado em relação à sua posição normal:
+--------------------------------------------
+Ele ocupa o espaço inicial, mesmo que deslocado pela tela. as propriedades deixadas de um elemento relativamente posicionado fará com que ele seja ajustado fora de sua posição normal. Outros conteúdos não serão ajustados para caber em qualquer espaço deixado pelo elemento.
+position: relative;
+
+
+Posição fixa, a página rola e ele não muda
+------------------------------------------
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+
+Posição absoluta pode ser mudado com coordenadas
+------------------------------------------------
+
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+} 
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+
+
+
+Elementos sobrepostos
+---------------------
+Quando os elementos são posicionados, que podem sobrepor-se outros elementos. O índice z propriedade especifica a ordem da pilha de um elemento (elemento que deve ser colocado em frente de, ou por trás, os outros).Um elemento com maior ordem da pilha está sempre na frente de um elemento com uma ordem de pilha inferior. Se dois elementos posicionados sobrepõem sem um índice z especificado, o elemento posicionado última no código HTML será mostrado no topo.
+
+Um elemento pode ter uma ordem de pilha positivo ou negativo:
+
+Exemplo
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+Propriedade:
+------------
+top, bottom, left, right.
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}

@@ -1,0 +1,134 @@
+Flex Box
+========
+
+	Fonte:
+	------
+	https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+	Alinhar os elementos em linha ou colunas:
+	-----------------------------------------
+
+		Sintaxe:
+		--------
+		flex-direction: row | row-reverse | column | column-reverse;
+
+		Alinhar elementos em linhas:
+		---------------------------------------
+		Todos os filhos do elemento vão ficar alinhados em linhas. Nesse estado todos os elementos vão ficar em uma única linha, irão se espremer para caber.
+		.container{
+			display: flex;
+			flex-direction: row;
+		}
+
+		Alinhar os elementos filhos em colunas:
+		---------------------------------------
+		Todos os filhos do elemento vão ficar alinhados em coluna única. 
+		.container{
+			display: flex;
+			flex-direction: column;
+		}
+
+
+	Quebrar a linha sem espremer os elementos
+	-----------------------------------------
+	A função no-wrap é padrão ela força todos os elementos em uma única linha espremendo para caber, para mudá-la colocamos wrap para quebrar a linha preservando a largura dos elementos.
+
+		Sintaxe:
+		--------
+		flex-wrap: nowrap | wrap | wrap-reverse;
+
+		.container{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+
+		Fazendo os dois juntos: direção e quebra:
+		-----------------------------------------
+		flex-flow: column wrap;
+
+		.container {
+			display: flex;
+			flex-flow: column wrap;
+		}
+
+
+	Alinhamento horizontal:
+	----------------------
+	Justificar as caixas filhas de container na posição horizontal. Os valores mais seguros são: flex-start, flex-end e center
+
+		Sintaxe:
+		justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+
+		flex-start ou start --> posição inicial. Alinhado a esquerda e colado.
+
+		flex-end --> os itens são alinhados a direita e colados.
+
+		center --> os itens são centralizados em relação o container colados.
+
+		space-between --> espaço justificado e dividido entre os elementos. O elemento inicial e o final ficam colados nas bordas do elemento pai.
+
+		space-around --> o espaço é dividido entre os elementos filhos não ficando colado nas bordas do elemento pais. O espaçamento inicial é metado do espaçamento entre os elementos.
+
+		space-evenly --> o espaçamento entre os filhos é totalmente justificado.
+
+
+		.container {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content:space-evenly;
+		}
+
+
+	Alinhamento vertical:
+	---------------------
+
+	.container {
+		align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+	}
+
+	stretch --> [Siginifica esticado] é o alinhamento padrão. Os filhos esticam e preenchem a área de altura do container.
+
+	center --> centraliza o elemento filho verticalmente.
+
+	flex-start --> os itens ficam colados na parte superior
+
+	flex-end --> cola os elementos na parte inferior do container.
+
+	baseline --> os itens são alinhados junto ao texto, na posição do texto [verticalmente].
+
+
+	Ordem de renderização:
+	----------------------
+	Todos os elementos são order 0 por padrão. É permitido valores negativos. 
+	.filho{
+		order: 1;
+	}
+
+
+	Proporção do item:
+	------------------
+	Define o tamanho que o item vai ficar em relação aos outros quanto a tela for aumentada.
+	.filho{
+		flex-grow: 1;
+	}
+
+
+	Proporção de encolhimento do item:
+	----------------------------------
+	Qual maior o valor mais o item vai encolher ao diminuir a tela.
+	.filho{
+		flex-shrink: 2;
+	}
+	
+
+	Tamanho inicial:
+	----------------
+	Define o tamanho inicial do item.
+	.filho{
+		flex-basis: 200px;
+	}
+
+

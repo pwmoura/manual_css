@@ -1,0 +1,16 @@
+cursores:
+=========
+cursor:auto --> Cursor automático do elemento.
+cursor:crosshair --> Cursor com o formato do sinal de mais.
+cursor:default --> Seta padrão.
+cursor:e-resize --> Seta dupla branca horizontal.
+cursor:grab --> Cursor de escrita, com a letra I maiuscula.
+cursor:help --> Seta com uma interrogação.
+cursor:move --> Seta de quatro pontas branca.
+cursor:n-resize --> Seta dupla branca vertical.
+cursor:ne-resize --> Seta dupla branca diagonal para direita.
+cursor:nw-resize --> Seta dupla branca diagonal para esquerda.
+cursor:pointer --> Elemento clicável.
+cursor:progress --> Cursor de progresso.
+cursor:wait --> Cursor de espere...
+cursor:not-allowed --> item proibido.

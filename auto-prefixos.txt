@@ -1,0 +1,4 @@
+Auto prefixos CSS:
+------------------
+Você cola o código e ele cria os prefixos automático.
+https://autoprefixer.github.io/

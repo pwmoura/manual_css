@@ -1,0 +1,4 @@
+Flexibility:
+------------
+Site com uma biblioteca que deixa o flexbox compatível com navegadores mais antigos.
+https://github.com/jonathantneal/flexibility

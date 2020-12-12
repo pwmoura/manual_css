@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Efeito Hero</title>
+	<style>
+		* {
+			padding:0;
+			margin:0;
+			vertical-align:baseline;
+			list-style:none;
+			border:0
+		}
+		body,html{
+			height: 100%;
+			background: #f1f1f1;
+			font-family: sans-serif;
+		}
+		.hero-image{
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+			background: url(images/8.jpg) no-repeat center;
+			background-size: cover;
+		}
+		.container{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			color: white;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		.container h1{
+			font-size: 4rem;
+			text-shadow: 1px 1px 3px #000;
+			letter-spacing: 0.2em;
+		}
+		.container h1 span{
+			border: 10px solid white;
+			padding: 6px 14px;
+			display: inline-block;
+		}
+		.container .desc{
+			margin: 20px;
+			display: block;
+			font-size: 26px;
+			text-shadow: 0 0 3px #000;
+		}
+		.container a{
+			text-decoration: none;
+			color: #f1f1f1;
+			border-radius: 10px;
+			border: 2px solid #f1f1f1;
+			padding: 6px 12px;
+		}
+	</style>
+</head>
+<body>
+	<section class="hero-image">
+		<div class="container">
+			<h1><span>PWMOURA</span></h1>
+			<span class="desc">Página do Professor Wenys Moura, Bem-Vindo!</span>
+			<a href="" class="bt">Acessar</a>
+		</div>
+	</section>
+</body>
+</html>

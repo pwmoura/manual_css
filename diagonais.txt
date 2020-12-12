@@ -1,0 +1,46 @@
+Formas diagonais:
+=================
+Para criar linhas diagonais em containers devemos utilizar a propriedade css transform:
+	
+	1º Exemplo:
+	-----------
+	Criará uma forma diagonal negativa. A diagonal cai para o lado direito mantendo as linhas do topo e da parte de baixo paralelas.
+	.ex-1 {
+		-webkit-transform: skew(-3deg); /* Chrome, Opera */
+		-ms-transform: skew(-30deg); /* IE */
+		transform: skew(-30deg); /* Padrão */
+	}
+
+	2º Exemplo:
+	-----------
+	Nesse exemplo teremos uma diagonal positiva. O inverso do exemplo anterior. Inclinando os lados para esquerda mantando a linha do topo e inferior transversais.
+	.ex-2 {
+		-webkit-transform: skew(30deg); /* Chrome, Opera */
+		-ms-transform: skew(30deg); /* IE */
+		transform: skew(30deg); /* Padrão */
+
+	}
+
+	3º Exemplo:
+	-----------
+	Nesse exemplo, ocorre o inverso dos anteriores, ao invés de inclinar os lados, são inclinados as linhas do topo e inferior mantendo os lados transversais. Podendo ser negativo ou positivo alterando a orientação.
+	.ex-3 {
+		-webkit-transform: skewY(-3deg);
+		-ms-transform: skewY(-3deg);
+		transform: skewY(-3deg);
+	}
+
+	Solução de Problemas
+	--------------------
+	O principal desafio é que o conteúdo inclina na mesma posição que a div container. Se tivermos um parágrafo, por exemplo, ele será transformado junto com o container gerando um resultado indesejado. para resolver o problema devemos transformá-lo inversamente ao container:
+
+	.container{
+		-webkit-transform: skewY(-3deg);
+		-ms-transform: skewY(-3deg);
+		transform: skewY(-3deg);
+	}
+	.container .paragrafo{
+		-webkit-transform: skewY(3deg);
+		-ms-transform: skewY(3deg);
+		transform: skewY(3deg);
+	}

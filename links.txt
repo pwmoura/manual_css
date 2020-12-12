@@ -1,0 +1,42 @@
+FORMATAÇÕES DE LINKS:
+---------------------
+	
+	# Color:
+	--------
+	a{
+		color: hotpink;
+	}
+	
+	
+	# Formatos para links:
+	----------------------
+	a: hover DEVE vir após a: link e a: visited
+	a: active DEVE vir após a: hover
+
+	
+		/* Link não visitado */
+		a:link {
+			color: red;
+		}
+
+		/* Link visitado */
+		a:visited {
+			color: green;
+		}
+
+		/* mouse sobre o link*/
+		a:hover {
+			color: hotpink;
+		}
+
+		/* Link selecionado */
+		a:active {
+			color: blue;
+		}
+	
+	
+	# Text decoration: underline, none
+	------------------
+		a{
+			text-decoration: none;
+		}

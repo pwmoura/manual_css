@@ -1,0 +1,24 @@
+LARGURA E ALTURA DE UM ELEMENTO:
+================================
+
+	LARGURA: auto|value|initial|inherit;
+	--------
+	# width: 100px ou 100%; --> largura de um elemento.
+	# min-width: 400px; --> Largura mínima de um elemento.
+	# max-width: 800px; --> Largura máximo de um elemento.
+	
+	
+	ALTURA: auto|value|initial|inherit;
+	-------
+	# height: 100px ou 100%; --> Altura de um elemento.
+	# min-height: 400px; --> Altura mínima de um elemento.
+	# max-height: 800px; --> Altura máxima.
+	
+	
+	
+LARGURA E ALTURAS AUTOMÁTICAS:
+==============================
+
+	# Utilização da tag: <br clear="" />
+	------------------------------------
+	Ela dá um clear na parte final do box para que ele siga o texto ou elemento filho.	

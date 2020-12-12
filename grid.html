@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Grid Layout</title>
+    <style>
+        
+        /*font-family: 'Montserrat', sans-serif;*/
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,700&display=swap');
+
+        /*Reset da página: */
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+        }
+        body{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+        }
+
+        /*Estilos gerais*/
+        .list-box{
+            padding:0;
+            margin: 0;
+            list-style: none;
+        }
+        .link{
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        .link:hover{
+            opacity: 1;
+        }
+        /*Teste*/
+        .container, .item{
+            border: 1px solid red;
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        
+        /*Grid Layout*/
+        .container{
+            background-color: black;
+            display: grid;
+            width: 600px;
+            height: 600px;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px;
+            grid-gap:10px;
+            
+        }
+        .item{
+            background-color: #999999;
+            width: 100px;
+            height: 100px;
+        }
+
+        .h-start{
+            justify-content: start;
+        }
+        .h-center{
+            justify-content: center;
+        }
+        .h-stretch{
+            justify-content: stretch;
+        }
+        .h-between{
+            justify-content: space-between;
+        }
+
+        .v-start{
+            align-content: start;
+        }
+        .v-center{
+            align-content: center;
+        }
+        .v-stretch{
+            align-content: stretch;
+        }
+        .v-between{
+            align-content: space-between;
+        }
+        
+     </style>
+</head>
+<body>
+    <ul class="list-box container h-between v-between">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+    </ul>
+</body>
+</html>

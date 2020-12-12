@@ -1,0 +1,34 @@
+MARGENS DO ELEMENTO:
+--------------------
+
+	# Definindo todas as 4 margens:
+	-------------------------------
+	margin: 25px 50px 75px 100px; /*cima direita embaixo esquerda*/
+	
+	
+	# Definindo margens: superior, direita e inferior:
+	--------------------------------------------
+	margin: 25px 50px 75px;
+	
+	
+	# Margem superior e inferior:
+	--------------------------
+	margin: 25px 50px;
+	
+	
+	# Mesmo valor para as 4 margens:
+	-------------------------------
+	margin: 25px;
+	
+	
+	# Centralizar horizontalmente o elemento:
+	-------------------------------------
+	margin: auto;
+	
+	
+	# Também aceita valores específicos:
+	-----------------------------------
+	margin-bottom --> Margem de baixo.
+	margin-left --> Margem esquerda.
+	margin-right --> Margem direita.
+	margin-top --> Margem do topo.

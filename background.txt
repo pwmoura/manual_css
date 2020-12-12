@@ -1,0 +1,265 @@
+﻿TRABALHANDO COM BACKGROUNDS
+===========================
+
+# background-color
+------------------
+/*
+	Aceita o nome da cor, em inglês ou o código hexadecimal.
+	Essa propriedade pode ser animada.
+	#00000 ou rgb(255,0,255) --> Código hexadecimal da cor.
+	transparent --> O elemento fica transparente. (Padrão)
+	initial --> Padrão do navegador.
+	inherit --> Herda do elemento pai.
+*/
+	div{
+		background-color:#000000;
+	}
+
+	
+	
+# background-image
+------------------
+/*
+	A url deve ser especificada entre aspas.
+	url('URL') --> Coloca uma url para uma imagem de fundo.
+	none --> Não usa imagem.
+	initial --> Padrão do navegador.
+	inherit --> Herda do elemento pai.
+*/
+	div{
+		background-image:url("diretorio/arquivo.jpg");
+	}
+
+	
+	
+# background-repeat
+-------------------
+/*
+	Seus valores são:
+		repeat --> A imagem de fundo será repetido tanto vertical quanto horizontalmente. Este é o padrão.
+		repeat-x --> repete na horizontal.
+		repeat-y --> repete na vertical.
+		no-repeat --> Não repete.
+		initial --> Padrão do navegador.
+		inherit --> Herda do elemento pai.
+*/
+	div{
+		background-image:url("diretorio/arquivo.jpg");
+		background-repeat:repeat-x;
+	}
+
+
+	
+# background-attachment
+-----------------------
+/*
+	A propriedade background-attachment define se uma imagem de
+	fundo é fixa ou rola com o resto da página.
+	Essa propriedade não pode ser animada.
+	--------------------------------------------
+		scroll --> A imagem segue a rolagem do documento.
+		fixed --> O fundo é fixo em relação à janela de exibição.
+		local --> fundo junto com o conteúdo do elemento.
+		initial --> Padrão do navegador.
+		inherit -->  herda essa propriedade do seu elemento pai.
+*/
+	div{
+		background-attachment: fixed;
+	}
+	
+
+	
+# background-position
+--------------------
+/*
+	left top --> esquerda e no topo.
+	left center --> esquerda e no centro.
+	left bottom --> esquerda e abaixo.
+	right top --> direita e no topo.
+	right center --> direita e no centro.
+	right bottom --> direita e abaixo.
+	center top --> no centro e no topo.
+	center center --> no centro e no meio.
+	center bottom --> no centro e abaixo.
+	
+	x% y% --> O primeiro valor é a posição horizontal e o segundo
+	valor é o vertical. O canto superior esquerdo é 0% 0%. O canto
+	inferior direito é de 100% a 100%. Se você especificar apenas 
+	um valor, o outro valor será de 50%. . O valor padrão é: 0% 0%.
+	
+	xpos ypos --> O primeiro valor é a posição horizontal eo segundo
+	valor é o vertical. O canto superior esquerdo é 0 0. As unidades
+	podem ser 0px 0px pixels () ou quaisquer outras unidades CSS. Se
+	você especificar apenas um valor, o outro valor será de 50%. Você
+	pode misturar% e posições.
+	
+	initial --> Valor padrão do navegador.
+	inherit --> Herda essa propriedade do seu elemento pai.
+*/
+	div{
+		background-position:center center;
+	}
+
+
+	
+# sintax completa e abreviada do background:
+/*
+	background: cor url repeat fixa posição;
+*/
+	div{
+		background: #00ff00 url("smiley.gif") no-repeat fixed center;
+	}
+	
+
+	
+	
+VARIAÇÕES DOS BACKGROUNDS NO CSS3 
+=================================
+	
+	# background-original
+/*
+	A propriedade background-origem especifica onde a imagem de fundo está posicionado.
+	Não aceita animações.
+	-----------------------------------------------------------------------------------
+		padding-box --> Valor padrão. A imagem de fundo é iniciado a partir do canto superior
+		esquerdo da borda do padding.
+		border-box --> A imagem de fundo é iniciado a partir do canto superior esquerdo da borda.
+		content-box --> A imagem de fundo é iniciado a partir do canto superior esquerdo do conteúdo.
+		initial --> Valor padrão do navegador.
+		inherit --> Herda essa propriedade do seu elemento pai.
+*/
+	div{
+		background-original: padding-box;
+	}
+	
+	
+	# background-size
+	/*
+		Determina o tamanho da imagem de fundo no background.
+		
+		20px 40px --> tamanhos de largura e comprimento para a imagem.
+			
+			div{
+				background:url(img_flower.jpg);
+				background-size:100px 80px;
+				background-repeat:no-repeat;
+			}
+		
+		contain --> palavras-chave dimensiona a imagem de fundo a ser tão grande quanto
+		possível (mas tanto a sua largura e sua altura deve caber dentro da
+		área de conteúdo). Como tal, dependendo das proporções da imagem de fundo
+		e a zona de posicionamento do fundo, pode haver algumas áreas do plano de
+		fundo, que não estão cobertas pela imagem de fundo.
+		
+		cover --> palavra-chave dimensiona a imagem de fundo para que a área de conteúdo
+		é completamente coberta pela imagem de fundo (ambos sua largura e altura são iguais
+		ou excedem a área de conteúdo). Como tal, algumas partes da imagem de fundo pode não
+		ser visíveis na área de posicionamento do fundo. Veja os exemplos:
+		
+			#div1 {
+				background: url(img_flower.jpg);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			#div2 {
+				background: url(img_flower.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+	*/
+	
+	
+	# Múltiplos backgrounds:
+	----------------------
+	/*
+		CSS3 permite adicionar múltiplas imagens de fundo para um elemento, através do background-image
+		propriedade. As diferentes imagens de fundo são separados por vírgulas, e as imagens são 
+		empilhados em cima uns dos outros, em que a primeira imagem é mais próximo do espectador. 
+		O exemplo a seguir tem duas imagens de fundo, a primeira imagem é uma flor (alinhado à 
+		parte inferior e direita) ea segunda imagem é um fundo de papel (alinhado com o 
+		canto superior esquerdo):
+	*/
+		#example1 {
+			background-image: url(img_flwr.gif), url(paper.gif);
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+		}
+		
+		#example2 {
+			background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+		}
+		
+		#example3 {
+			background: url(img_flwr.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+			background-size: 50px, 130px, auto;
+		}
+	
+	
+	
+	# background-clip
+	-----------------
+	/*
+		O CSS3 background-clip de propriedade especifica a área de pintura de fundo.
+		A propriedade tem três valores diferentes:
+
+		border-box --> (padrão) o fundo é pintado para a borda externa da fronteira
+		padding-box --> o fundo é pintado para a borda externa do estofamento
+		content-box --> o fundo é pintado dentro da caixa de conteúdo
+		initial --> Valor padrão do navegador.
+		inherit --> Herda essa propriedade do seu elemento pai.
+
+		Não aceita animação js.
+		O exemplo a seguir ilustra o background-clip de propriedade:
+		
+	*/
+		#example1 {
+			border: 10px dotted black;
+			padding:35px;
+			background: yellow;
+			background-clip: content-box;
+		}
+
+
+
+
+CENTRALIZAR BACKGROUND
+======================
+
+Neste post vamos ver como colocar uma imagem de fundo maior que a resolução e que mesmo assim fique centralizada.
+
+Neste post vamos ver o quanto é simples colocar uma imagem grande, maior do que 1280px de largura, ficar centralizada no layout sem a inclusão de barra de rolagem.
+
+Vamos lá:
+
+Este é o arquivo que para simplificar deixei tudo junto, html e css:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title> Background Centralizado </title>
+
+    <style tyle="text/css">
+        body{margin:0; padding:0;}
+        #fundo{background:#ccc url(fundo.jpg) no-repeat center top;min-width:960px;width:100%;}
+        #bgCentro{width:960px;height:500px;margin:0 auto;padding-bottom:50px;border:1px solid;}
+    </style>
+    
+</head>
+<body>
+    <div id="fundo">
+        <div id="bgCentro">
+            df gfgdf gdfgdfg
+        </div>
+    </div>
+</body>
+</html>
+
+Após dar uma olhada no código e garantir de ter uma imagem grande (maior que 1280px de largura) e com o nome de fundo e ser com a extensão jpg.
+
+Verão que a mágica está apenas nas propriedades de background da imagem... onde coloco um CENTER para que esta fique centralizada na horizontal e TOP para que ela fique alinhada no topo do site, eu ainda poderia escrever como "50%" e "0".
+
+Para dúvidas pesquisem sobre "background-position"
+
+Até a próxima
+Leandro

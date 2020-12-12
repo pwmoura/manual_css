@@ -1,0 +1,6 @@
+LARGURA E ALTURAS AUTOMÁTICAS:
+==============================
+
+	# Utilização da tag: <br clear="" />
+	------------------------------------
+	Ela dá um clear na parte final do box para que ele siga o texto ou elemento filho.

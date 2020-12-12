@@ -1,0 +1,40 @@
+PADDING DOS ELEMENTOS:
+----------------------
+O espaço em branco entre o conteúdo do elemento e do limite do elemento.
+
+	# Cada lado do elemento:
+	------------------------
+	p {
+		padding-top: 50px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		padding-left: 80px;
+	}	
+	
+	
+	# Forma rápida de representação:
+	--------------------------------
+	p {
+		padding: 50px 30px 50px 80px;/*cima direita embaixo esquerda*/
+	}
+	
+	
+	# Padding de cima, direita e abaixo.
+	---------------------------------
+	p{
+		padding: 25px 50px 75px;
+	}
+	
+	
+	# Padding acima e abaixo.
+	------------------------
+	p{
+		padding: 25px 50px;
+	}
+	
+	
+	# Padding igual para os quatro lados.
+	---------------------------------
+	span{
+		padding: 10px;
+	}
